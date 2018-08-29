@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @tea.date %>
+</p>
+
+<p>
+  <strong>Morning qty:</strong>
+  <%= @tea.morning_qty %>
+</p>
+
+<p>
+  <strong>Evening qty:</strong>
+  <%= @tea.evening_qty %>
+</p>
+
+<p>
+  <strong>Total qty:</strong>
+  <%= @tea.total_qty %>
+</p>
+
+<!-- <p>
+  <strong>Final total:</strong>
+  <%#= @tea.final_total %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%#= @tea.price %>
+</p>
+
+<p>
+  <strong>Total price:</strong>
+  <%#= @tea.total_price %>
+</p> -->
+
+<%= link_to 'Edit', edit_tea_path(@tea) %> |
+<%= link_to 'Back', teas_path %>

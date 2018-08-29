@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2018-08-29
+  morning_qty: MyString
+  evening_qty: MyString
+  total_qty: MyString
+  final_total: MyString
+  price: MyString
+  total_price: MyString
+
+two:
+  date: 2018-08-29
+  morning_qty: MyString
+  evening_qty: MyString
+  total_qty: MyString
+  final_total: MyString
+  price: MyString
+  total_price: MyString

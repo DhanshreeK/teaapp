@@ -1,0 +1,72 @@
+<%= form_with(model: tea, local: true) do |form| %>
+  <% if tea.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tea.errors.count, "error") %> prohibited this tea from being saved:</h2>
+
+      <ul>
+      <% tea.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="col-md-6">
+  <div class="form-group">
+    <%= form.label :date %>
+    <%= form.date_field :date , class: 'form-control'%>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="form-group">
+    <%= form.label :morning_qty %>
+    <%= form.text_field :morning_qty, class: 'form-control' %>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="form-group">
+    <%= form.label :evening_qty %>
+    <%= form.text_field :evening_qty, class: 'form-control' %>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="form-group">
+    <%= form.label :total_qty %>
+    <%= form.text_field :total_qty, class: 'form-control' %>
+  </div>
+</div>
+<!-- 
+  <div class="form-group">
+    <%#= form.label :final_total %>
+    <%#= form.text_field :final_total %>
+  </div>
+
+  <div class="form-group">
+    <%#= form.label :price %>
+    <%#= form.text_field :price %>
+  </div>
+
+  <div class="form-group">
+    <%#= form.label :total_price %>
+    <%#= form.text_field :total_price %>
+  </div> -->
+
+  <div class="actions">
+    <%= form.submit "Submit", class: 'btn btn-success'%> |
+    <%= link_to 'Back', teas_path, class: 'btn btn-primary' %>
+
+  </div>
+<% end %>
+
+
+
+<script type='text/javascript'>
+   $(document).on("keyup", "#tea_morning_qty,#tea_evening_qty" ,function() {
+   var val1 = +$("#tea_morning_qty").val();
+   var val2 = +$("#tea_evening_qty").val();
+          $("#tea_total_qty").val(val1+val2);
+  });
+</script>
